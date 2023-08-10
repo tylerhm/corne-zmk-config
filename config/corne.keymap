@@ -14,7 +14,19 @@
 #define FN 3
 
 / {
-  keymap {
+    behaviors {
+        hplt: hold_preferred_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_PREFERRED_LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <300>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+    };
+
+    keymap {
     compatible = "zmk,keymap";
 
     default_layer {
@@ -30,7 +42,7 @@
         &kp LSHIFT      &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RSHIFT
         // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
         //                                                  36              37              38                  39              40              41
-                                                        &kp LCTRL       &kp LCMD        &lt LOWER BSPC      &lt RAISE SPC   &lt FN RET      &kp RALT
+                                                        &kp LCTRL       &kp LCMD      &hplt LOWER BSPC    &hplt RAISE SPC &hplt FN RET      &kp RALT
         //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
         >;
     };
