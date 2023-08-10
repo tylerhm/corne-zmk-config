@@ -15,13 +15,13 @@
 
 / {
   behaviors {
-    hplt: hold_preferred_layer_tap {
+    blt: balanced_layer_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOLD_PREFERRED_LAYER_TAP";
+      label = "BALANCED_LAYER_TAP";
       #binding-cells = <2>;
       tapping-term-ms = <150>;
       quick-tap-ms = <300>;
-      flavor = "hold-preferred";
+      flavor = "balanced";
       bindings = <&mo>, <&kp>;
     };
   };
@@ -42,7 +42,7 @@
         &kp LSHIFT      &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RSHIFT
         // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
         //                                                  36              37              38                  39              40              41
-                                                        &kp LCTRL       &kp LCMD      &hplt LOWER BSPC    &hplt RAISE SPC &hplt FN RET      &kp RALT
+                                                        &kp LCTRL       &kp LCMD       &blt LOWER BSPC     &blt RAISE SPC  &blt FN RET      &kp RALT
         //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
         >;
     };
