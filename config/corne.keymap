@@ -31,9 +31,9 @@
 
         sym {
             bindings = <
-&trans  &kp EXCL     &kp AT   &kp HASH   &kp DLLR      &kp PRCNT    &kp CARET   &kp AMPS  &kp STAR  &kp EQUAL  &trans  &trans
-&trans    &trans  &kp MINUS   &kp LPAR   &kp LBRC       &kp LBKT     &kp RBKT   &kp RBRC  &kp RPAR   &kp PLUS  &trans  &trans
-&trans    &trans     &trans  &kp GRAVE  &kp TILDE  &kp BACKSLASH    &kp SLASH  &kp UNDER  &kp PIPE     &trans  &trans  &trans
+&trans      &kp EXCL   &kp AT   &kp HASH   &kp DLLR      &kp PRCNT    &kp CARET   &kp AMPS  &kp STAR  &kp EQUAL  &trans  &trans
+&trans      &trans  &kp MINUS   &kp LPAR   &kp LBRC       &kp LBKT     &kp RBKT   &kp RBRC  &kp RPAR   &kp PLUS  &trans  &trans
+&caps_word  &trans     &trans  &kp GRAVE  &kp TILDE  &kp BACKSLASH    &kp SLASH  &kp UNDER  &kp PIPE     &trans  &trans  &trans
                                 &trans     &trans         &trans       &trans     &trans    &trans
             >;
         };
